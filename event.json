@@ -1,33 +1,41 @@
 {
   "version": "0",
-  "id": "abcd1234-5678-90ef-ghij-klmnopqrstuv",
+  "id": "c0c5d8c1-1234-5678-90ab-cdef12345678",
   "detail-type": "AWS API Call via CloudTrail",
-  "source": "aws.s3",
+  "source": "aws.iam",
   "account": "123456789012",
-  "time": "2025-02-17T10:30:00Z",
+  "time": "2025-02-16T12:34:56Z",
   "region": "us-east-1",
   "resources": [],
   "detail": {
     "eventVersion": "1.08",
     "userIdentity": {
       "type": "IAMUser",
-      "principalId": "AIDEXAMPLE1234567890",
-      "arn": "arn:aws:iam::123456789012:user/admin",
+      "principalId": "AIDAEXAMPLE123456789",
+      "arn": "arn:aws:iam::123456789012:user/AdminUser",
       "accountId": "123456789012",
-      "userName": "admin"
+      "accessKeyId": "AKIAXXXXXXXXXXXXXXXX",
+      "userName": "AdminUser"
     },
-    "eventTime": "2025-02-17T10:30:00Z",
-    "eventSource": "s3.amazonaws.com",
-    "eventName": "PutBucketPolicy",
+    "eventTime": "2025-02-16T12:34:56Z",
+    "eventSource": "iam.amazonaws.com",
+    "eventName": "CreateUser",
     "awsRegion": "us-east-1",
-    "sourceIPAddress": "203.0.113.25",
-    "userAgent": "aws-cli/2.0",
+    "sourceIPAddress": "203.0.113.10",
+    "userAgent": "aws-cli/2.13.1 Python/3.9.11",
     "requestParameters": {
-      "bucketName": "my-test-bucket",
-      "policy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":\"s3:GetObject\",\"Resource\":\"arn:aws:s3:::my-test-bucket/*\"}]}"
+      "userName": "NewUser"
     },
-    "responseElements": null,
-    "requestID": "EXAMPLE-1234-5678-9012-EXAMPLE",
-    "eventID": "abcd-1234-5678-9012-efghijklmnop"
+    "responseElements": {
+      "user": {
+        "path": "/",
+        "userName": "NewUser",
+        "userId": "AIDAEXAMPLE987654321",
+        "arn": "arn:aws:iam::123456789012:user/NewUser",
+        "createDate": "Feb 16, 2025 12:34:56 PM"
+      }
+    },
+    "requestID": "abcd1234-ef56-78gh-90ij-klmn567890op",
+    "eventID": "pqrs1234-tu56-78vw-90xy-zabc567890de"
   }
 }
