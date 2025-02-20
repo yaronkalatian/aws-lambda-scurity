@@ -1,0 +1,33 @@
+{
+  "version": "0",
+  "id": "abcd1234-5678-90ef-ghij-klmnopqrstuv",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.s3",
+  "account": "123456789012",
+  "time": "2025-02-17T10:30:00Z",
+  "region": "us-east-1",
+  "resources": [],
+  "detail": {
+    "eventVersion": "1.08",
+    "userIdentity": {
+      "type": "IAMUser",
+      "principalId": "AIDEXAMPLE1234567890",
+      "arn": "arn:aws:iam::123456789012:user/admin",
+      "accountId": "123456789012",
+      "userName": "admin"
+    },
+    "eventTime": "2025-02-17T10:30:00Z",
+    "eventSource": "s3.amazonaws.com",
+    "eventName": "PutBucketPolicy",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "203.0.113.25",
+    "userAgent": "aws-cli/2.0",
+    "requestParameters": {
+      "bucketName": "my-test-bucket",
+      "policy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":\"s3:GetObject\",\"Resource\":\"arn:aws:s3:::my-test-bucket/*\"}]}"
+    },
+    "responseElements": null,
+    "requestID": "EXAMPLE-1234-5678-9012-EXAMPLE",
+    "eventID": "abcd-1234-5678-9012-efghijklmnop"
+  }
+}
